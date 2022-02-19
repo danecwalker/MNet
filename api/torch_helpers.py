@@ -1,4 +1,5 @@
 import io
+from time import time
 import torch
 import torchvision.transforms as transforms
 
@@ -13,10 +14,14 @@ output_size = 10
 
 model = MNet(input_size, hidden_size, output_size)
 
+MODEL_PATH = f'./models/mnist_api_1645269116.pth'
+model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu'))
+model.eval()
+
 def set_model_path(_model):
   # load neural model
   MODEL_PATH = f'./models/mnist_api_{_model}.pth'
-  model.load_state_dict(torch.load(MODEL_PATH))
+  model.load_state_dict(torch.load(MODEL_PATH, map_location='gpu'))
   model.eval()
 
 # image convert to tensor
@@ -27,7 +32,7 @@ def convert_image(image_bytes):
 
   image = Image.open(io.BytesIO(image_bytes))
   image = ImageOps.invert(image)
-  # image.save(f'./api/imgs/image_{int(time())}.jpg ')
+  # image.save(f'./api/imgs/image_{int(time())}.jpg')
   return transform(image).unsqueeze(0)
 
 def predict_y(image_tensor):
