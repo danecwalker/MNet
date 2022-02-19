@@ -2,10 +2,9 @@
 
 An MNIST feedforward model coded in python and served via Flask.
 
-
 Run the script without flags to serve the demo application via Flask
 
-```
+```bash
 usage: MNet.py [-h] [-t] [-lr LEARNING_RATE] [-e EPOCHS] [-b BATCH] [-m MODEL]
 
 optional arguments:
@@ -23,10 +22,10 @@ optional arguments:
 
 ## Screenshots
 
-![](screenshots/screenshot_1.png)
+![screenshot 1](screenshots/screenshot_1.png)
 
-![](screenshots/screenshot_2.png)
+![screenshot 2](screenshots/screenshot_2.png)
 
-![](screenshots/screenshot_3.png)
+![screenshot 3](screenshots/screenshot_3.png)
 
-![](screenshots/screenshot_4.png)
+![screenshot 4](screenshots/screenshot_4.png)
