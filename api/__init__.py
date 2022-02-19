@@ -34,5 +34,5 @@ def run(model="1645269116"):
   app.run(threaded=True, host='0.0.0.0', port=3000)
 
 if __name__ == "__main__":
-  api.torch_helpers.set_model_path(model)
+  api.torch_helpers.set_model_path("1645269116")
   app.run(threaded=True, host='0.0.0.0', port=3000)
