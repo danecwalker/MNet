@@ -31,4 +31,8 @@ def predict():
 
 def run(model="1645269116"):
   api.torch_helpers.set_model_path(model)
-  app.run(debug=True, host='0.0.0.0', port=3000)
+  app.run(threaded=True, host='0.0.0.0', port=3000)
+
+if __name__ == "__main__":
+  api.torch_helpers.set_model_path(model)
+  app.run(threaded=True, host='0.0.0.0', port=3000)
