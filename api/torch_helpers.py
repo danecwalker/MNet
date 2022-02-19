@@ -4,7 +4,7 @@ import torchvision.transforms as transforms
 
 from PIL import Image, ImageOps
 
-from MNet.net import MNet
+from api.net import MNet
 
 # neural net parameters
 input_size = 784 # 28*28
