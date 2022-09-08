@@ -22,4 +22,4 @@ optional arguments:
 
 ## Screenshots
 
-![screenshot 1](screenshots/screenshot_1.png)
+![screenshot_1](screenshots/screenshot_1.png)
